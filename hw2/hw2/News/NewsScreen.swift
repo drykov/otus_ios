@@ -9,7 +9,9 @@ import SwiftUI
 
 struct NewsScreen: View {
     
-    @EnvironmentObject private var viewModel: NewsViewModel
+    @EnvironmentObject var navigation: NavigationContainerViewModel
+
+    @ObservedObject private var viewModel = NewsViewModel()
 
     var body: some View {
         VStack {
@@ -23,7 +25,10 @@ struct NewsScreen: View {
             .padding()
 
             List(viewModel.articles) { article in
-                NewsCell(article: article)
+                ArticleCell(article: article)
+                    .onTapGesture {
+                        navigation.push(screenView: ArticleScreen(article: article).toAnyView())
+                    }
                     .onAppear {
                         if viewModel.articles.isLast(article) {
                             viewModel.loadPage()
@@ -39,6 +44,5 @@ struct NewsScreen_Previews: PreviewProvider {
     
     static var previews: some View {
         NewsScreen()
-            .environmentObject(NewsViewModel())
     }
 }

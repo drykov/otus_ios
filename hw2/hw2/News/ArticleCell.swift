@@ -1,5 +1,5 @@
 //
-//  NewsCell.swift
+//  ArticleCell.swift
 //  hw2
 //
 //  Created by Dmitry Rykov on 26.03.2022.
@@ -8,7 +8,7 @@
 import SwiftUI
 import NewsNetworking
 
-struct NewsCell: View {
+struct ArticleCell: View {
     
     let article: Article
     
@@ -19,8 +19,8 @@ struct NewsCell: View {
     }
 }
 
-struct NewsCell_Previews: PreviewProvider {
+struct ArticleCell_Previews: PreviewProvider {
     static var previews: some View {
-        NewsCell(article: Article(url: ""))
+        ArticleCell(article: Article(url: ""))
     }
 }

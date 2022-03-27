@@ -12,8 +12,9 @@ struct hw2App: App {
  
     var body: some Scene {
         WindowGroup {
-            NewsScreen()
-                .environmentObject(NewsViewModel())
+            NavigationContainerView(transition: .custom(.slide)) {
+                NewsScreen()
+            }
         }
     }
 }
