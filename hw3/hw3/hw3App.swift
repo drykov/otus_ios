@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import CoreModule
 
 @main
 struct hw3App: App {
+    
+    init() {
+        Configurator.shared.register()
+    }
     
     var body: some Scene {
         WindowGroup {

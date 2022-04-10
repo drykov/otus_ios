@@ -10,7 +10,7 @@ import CoreModule
 
 final class NewsViewModel: ObservableObject {
     
-    private let newsService: NewsService = NewsServiceImpl()
+    private let newsService: NewsService? = ServiceLocator.shared.resolve()
 
     let sections = ["iOS", "Android"]
     @Published var currentSection: Int = 0 {
@@ -29,7 +29,7 @@ final class NewsViewModel: ObservableObject {
     }
     
     func loadPage() {
-        newsService.loadArticles(query: sections[currentSection], page: page) { [weak self] list, error in
+        newsService?.loadArticles(query: sections[currentSection], page: page) { [weak self] list, error in
             self?.articles.append(contentsOf: list ?? [])
             self?.page += 1
         }
