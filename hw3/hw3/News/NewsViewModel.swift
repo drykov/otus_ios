@@ -10,7 +10,7 @@ import CoreModule
 
 final class NewsViewModel: ObservableObject {
     
-    private let newsService: NewsService? = ServiceLocator.shared.resolve()
+    @Inject private var newsService: NewsService?
 
     let sections = ["iOS", "Android"]
     @Published var currentSection: Int = 0 {
@@ -22,7 +22,7 @@ final class NewsViewModel: ObservableObject {
     }
     
     @Published var articles: [NewsArticle] = .init()
-    var page = 1
+    private var page = 1
     
     init() {
         loadPage()
