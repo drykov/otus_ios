@@ -7,10 +7,11 @@
 
 import Foundation
 import NewsNetworking
+import Combine
 
 public protocol NewsService {
     
-    func loadArticles(query: String, page: Int, completion: @escaping ([NewsArticle]?, Error?) -> Void)
+    func loadArticles(query: String, page: Int) -> Future<[NewsArticle]?, Error>
 }
 
 public class NewsServiceImpl: NewsService {
@@ -22,11 +23,18 @@ public class NewsServiceImpl: NewsService {
 
     public init() {}
     
-    public func loadArticles(query: String, page: Int, completion: @escaping ([NewsArticle]?, Error?) -> Void) {
-        ArticlesAPI.everythingGet(q: query, from: from, sortBy: sortBy, language: language, apiKey: apiKey, page: page) { data, error in
-            completion(data?.articles?.map { article in
-                NewsArticle(id: article.url, title: article.title, author: article.author, content: article.content)
-            }, error)
+    public func loadArticles(query: String, page: Int) -> Future<[NewsArticle]?, Error> {
+        Future { [weak self] promise in
+            guard let self = self else { return }
+            ArticlesAPI.everythingGet(q: query, from: self.from, sortBy: self.sortBy, language: self.language, apiKey: self.apiKey, page: page) { data, error in
+                if let error = error {
+                    promise(.failure(error))
+                } else {
+                    promise(.success(data?.articles?.map { article in
+                        NewsArticle(id: article.url, title: article.title, author: article.author, content: article.content)
+                    }))
+                }
+            }
         }
     }
 }

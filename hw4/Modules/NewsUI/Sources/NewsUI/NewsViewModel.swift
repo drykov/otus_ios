@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreModule
+import Combine
 
 final class NewsViewModel: ObservableObject {
     
@@ -24,15 +25,18 @@ final class NewsViewModel: ObservableObject {
     @Published var articles: [NewsArticle] = .init()
     private var page = 1
     
+    private var cancellable: AnyCancellable?
+    
     init() {
         loadPage()
     }
     
     func loadPage() {
-        newsService?.loadArticles(query: sections[currentSection], page: page) { [weak self] list, error in
-            self?.articles.append(contentsOf: list ?? [])
-            self?.page += 1
-        }
+        cancellable = newsService?.loadArticles(query: sections[currentSection], page: page)
+            .sink(receiveCompletion: { _ in }, receiveValue: { [weak self] list in
+                self?.articles.append(contentsOf: list ?? [])
+                self?.page += 1
+            })
     }
 }
 
