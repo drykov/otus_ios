@@ -6,37 +6,31 @@
 //
 
 import Foundation
-import CoreModule
 import Combine
 
 final class NewsViewModel: ObservableObject {
-    
-    @Inject private var newsService: NewsService?
 
-    let sections = ["iOS", "Android"]
+    let sections = [SectionViewModel(query: "iOS"), SectionViewModel(query: "Android")]
     @Published var currentSection: Int = 0 {
         didSet {
-            articles = []
-            page = 1
-            loadPage()
+            let section = sections[currentSection]
+            if section.articles.isEmpty {
+                section.loadPage()
+            }
         }
     }
     
-    @Published var articles: [NewsArticle] = .init()
-    private var page = 1
-    
-    private var cancellable: AnyCancellable?
+    private var cancellables = Set<AnyCancellable>()
     
     init() {
-        loadPage()
-    }
-    
-    func loadPage() {
-        cancellable = newsService?.loadArticles(query: sections[currentSection], page: page)
-            .sink(receiveCompletion: { _ in }, receiveValue: { [weak self] list in
-                self?.articles.append(contentsOf: list ?? [])
-                self?.page += 1
-            })
+        for section in sections {
+            section.objectWillChange
+                .sink { [weak self] in
+                    self?.objectWillChange.send()
+                }
+                .store(in: &cancellables)
+        }
+        sections[currentSection].loadPage()
     }
 }
 

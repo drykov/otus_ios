@@ -20,21 +20,21 @@ public struct NewsScreen: View {
         VStack {
             Picker("Sections", selection: $viewModel.currentSection) {
                 ForEach(0..<viewModel.sections.count) { index in
-                    Text(viewModel.sections[index])
+                    Text(viewModel.sections[index].query)
                         .tag(index)
                 }
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding()
 
-            List(viewModel.articles) { article in
+            List(viewModel.sections[viewModel.currentSection].articles) { article in
                 ArticleCell(article: article)
                     .onTapGesture {
                         navigation.push(screenView: ArticleScreen(article: article).toAnyView())
                     }
                     .onAppear {
-                        if viewModel.articles.isLast(article) {
-                            viewModel.loadPage()
+                        if viewModel.sections[viewModel.currentSection].articles.isLast(article) {
+                            viewModel.sections[viewModel.currentSection].loadPage()
                         }
                     }
             }
