@@ -33,12 +33,15 @@ class SuffixViewModel: ObservableObject {
     
     @Published var sorted: [String] = .init()
     
-    func add(word: String) {
-        SuffixSequence(word: word).forEach { v in
-            if let count = suffixes[v] {
-                suffixes[v] = count + 1
-            } else {
-                suffixes[v] = 1
+    func build(text: String) {
+        suffixes.removeAll()
+        text.split(separator: " ").forEach { word in
+            SuffixSequence(word: String(word)).forEach { v in
+                if let count = suffixes[v] {
+                    suffixes[v] = count + 1
+                } else {
+                    suffixes[v] = 1
+                }
             }
         }
         update()

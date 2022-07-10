@@ -11,7 +11,7 @@
 		323DCDC42821A1610065C302 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323DCDC32821A1610065C302 /* ContentView.swift */; };
 		323DCDC62821A1630065C302 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 323DCDC52821A1630065C302 /* Assets.xcassets */; };
 		323DCDC92821A1630065C302 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 323DCDC82821A1630065C302 /* Preview Assets.xcassets */; };
-		323DCDD02821A2F70065C302 /* AddScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323DCDCF2821A2F70065C302 /* AddScreen.swift */; };
+		323DCDD02821A2F70065C302 /* InputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323DCDCF2821A2F70065C302 /* InputScreen.swift */; };
 		323DCDD22821A3280065C302 /* StatsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323DCDD12821A3280065C302 /* StatsScreen.swift */; };
 		323DCDD42821A4770065C302 /* SuffixViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323DCDD32821A4770065C302 /* SuffixViewModel.swift */; };
 		323DCDD62821BAE40065C302 /* SuffixSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323DCDD52821BAE40065C302 /* SuffixSequence.swift */; };
@@ -23,7 +23,7 @@
 		323DCDC32821A1610065C302 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		323DCDC52821A1630065C302 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		323DCDC82821A1630065C302 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		323DCDCF2821A2F70065C302 /* AddScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreen.swift; sourceTree = "<group>"; };
+		323DCDCF2821A2F70065C302 /* InputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputScreen.swift; sourceTree = "<group>"; };
 		323DCDD12821A3280065C302 /* StatsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsScreen.swift; sourceTree = "<group>"; };
 		323DCDD32821A4770065C302 /* SuffixViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixViewModel.swift; sourceTree = "<group>"; };
 		323DCDD52821BAE40065C302 /* SuffixSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixSequence.swift; sourceTree = "<group>"; };
@@ -61,12 +61,12 @@
 			children = (
 				323DCDC12821A1610065C302 /* hw5App.swift */,
 				323DCDC32821A1610065C302 /* ContentView.swift */,
-				323DCDCF2821A2F70065C302 /* AddScreen.swift */,
+				323DCDCF2821A2F70065C302 /* InputScreen.swift */,
 				323DCDD12821A3280065C302 /* StatsScreen.swift */,
 				323DCDD32821A4770065C302 /* SuffixViewModel.swift */,
+				323DCDD52821BAE40065C302 /* SuffixSequence.swift */,
 				323DCDC52821A1630065C302 /* Assets.xcassets */,
 				323DCDC72821A1630065C302 /* Preview Content */,
-				323DCDD52821BAE40065C302 /* SuffixSequence.swift */,
 			);
 			path = hw5;
 			sourceTree = "<group>";
@@ -152,7 +152,7 @@
 				323DCDC42821A1610065C302 /* ContentView.swift in Sources */,
 				323DCDD62821BAE40065C302 /* SuffixSequence.swift in Sources */,
 				323DCDC22821A1610065C302 /* hw5App.swift in Sources */,
-				323DCDD02821A2F70065C302 /* AddScreen.swift in Sources */,
+				323DCDD02821A2F70065C302 /* InputScreen.swift in Sources */,
 				323DCDD42821A4770065C302 /* SuffixViewModel.swift in Sources */,
 				323DCDD22821A3280065C302 /* StatsScreen.swift in Sources */,
 			);

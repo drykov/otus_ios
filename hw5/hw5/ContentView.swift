@@ -8,20 +8,20 @@
 import SwiftUI
 
 enum Tab {
-    case add, stats
+    case input, stats
 }
 
 struct ContentView: View {
     
-    @State private var tab = Tab.add
+    @State private var tab = Tab.input
     
     var body: some View {
         TabView(selection: $tab) {
-            AddScreen()
+            InputScreen(tab: $tab)
                 .tabItem {
-                    Label("Add", systemImage: "plus")
+                    Label("Input", systemImage: "character.textbox")
                 }
-                .tag(Tab.add)
+                .tag(Tab.input)
             StatsScreen()
                 .tabItem {
                     Label("Stats", systemImage: "list.number")
