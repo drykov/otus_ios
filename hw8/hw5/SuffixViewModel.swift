@@ -18,6 +18,12 @@ enum Sort: String, CaseIterable {
 
 class SuffixViewModel: ObservableObject {
     
+    private let suffixesService: SuffixesService
+    
+    init(suffixesService: SuffixesService = SuffixesService.shared) {
+        self.suffixesService = suffixesService
+    }
+
     @Published var mode: Mode = .abc {
         didSet {
             update()
@@ -35,18 +41,13 @@ class SuffixViewModel: ObservableObject {
     @Published var sorted: [String] = .init()
     
     func build(text: String) {
-        suffixes.removeAll()
-        text.split(separator: " ").forEach { word in
-            SuffixSequence(word: String(word)).forEach { v in
-                if let count = suffixes[v] {
-                    suffixes[v] = count + 1
-                } else {
-                    suffixes[v] = 1
-                }
+        suffixesService.computeSuffixes(text: text, completion: { [weak self] suffixes, _ in
+            DispatchQueue.main.async {
+                self?.suffixes = suffixes
+                self?.save()
+                self?.update()
             }
-        }
-        save()
-        update()
+        })
     }
     
     private func save() {

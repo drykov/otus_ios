@@ -21,7 +21,7 @@ struct HistoryScreen: View {
                     Text(viewModel.texts[i])
                     Spacer()
                     if let time = viewModel.times[i] {
-                        Text(String(time))
+                        Text(String(format: "%.3f ms", time * 1000.0))
                     } else {
                         Text("-")
                     }
