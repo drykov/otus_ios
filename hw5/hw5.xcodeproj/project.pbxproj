@@ -24,6 +24,8 @@
 		3254C624287B03BD00FBF0F0 /* hw5widgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3254C613287B03BB00FBF0F0 /* hw5widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3254C62C287B081600FBF0F0 /* Suffix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3254C62B287B081600FBF0F0 /* Suffix.swift */; };
 		3254C62D287B085100FBF0F0 /* Suffix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3254C62B287B081600FBF0F0 /* Suffix.swift */; };
+		326F127B287B34530000D910 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F127A287B34530000D910 /* Constants.swift */; };
+		326F127C287B386D0000D910 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F127A287B34530000D910 /* Constants.swift */; };
 		3292BB99287B0FA40066ED56 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3292BB98287B0FA40066ED56 /* Tab.swift */; };
 		3292BB9A287B0FA40066ED56 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3292BB98287B0FA40066ED56 /* Tab.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		32382220287B4AB00006C3F2 /* hw5.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = hw5.entitlements; sourceTree = "<group>"; };
 		323DCDBE2821A1610065C302 /* hw5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hw5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		323DCDC12821A1610065C302 /* hw5App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hw5App.swift; sourceTree = "<group>"; };
 		323DCDC32821A1610065C302 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,7 +73,9 @@
 		3254C61D287B03BD00FBF0F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3254C61F287B03BD00FBF0F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3254C62B287B081600FBF0F0 /* Suffix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suffix.swift; sourceTree = "<group>"; };
+		326F127A287B34530000D910 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3292BB98287B0FA40066ED56 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		32ADE199287B46D5007B9F4C /* hw5widgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = hw5widgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +101,7 @@
 		323DCDB52821A1610065C302 = {
 			isa = PBXGroup;
 			children = (
+				32ADE199287B46D5007B9F4C /* hw5widgetExtension.entitlements */,
 				3254C62A287B07F800FBF0F0 /* shared */,
 				323DCDC02821A1610065C302 /* hw5 */,
 				3254C619287B03BB00FBF0F0 /* hw5widget */,
@@ -116,6 +122,7 @@
 		323DCDC02821A1610065C302 /* hw5 */ = {
 			isa = PBXGroup;
 			children = (
+				32382220287B4AB00006C3F2 /* hw5.entitlements */,
 				323DCDC12821A1610065C302 /* hw5App.swift */,
 				323DCDC32821A1610065C302 /* ContentView.swift */,
 				323DCDCF2821A2F70065C302 /* InputScreen.swift */,
@@ -161,6 +168,7 @@
 			children = (
 				3254C62B287B081600FBF0F0 /* Suffix.swift */,
 				3292BB98287B0FA40066ED56 /* Tab.swift */,
+				326F127A287B34530000D910 /* Constants.swift */,
 			);
 			path = shared;
 			sourceTree = "<group>";
@@ -271,6 +279,7 @@
 				323DCDC22821A1610065C302 /* hw5App.swift in Sources */,
 				323DCDD02821A2F70065C302 /* InputScreen.swift in Sources */,
 				3254C62C287B081600FBF0F0 /* Suffix.swift in Sources */,
+				326F127B287B34530000D910 /* Constants.swift in Sources */,
 				323DCDD42821A4770065C302 /* SuffixViewModel.swift in Sources */,
 				3292BB99287B0FA40066ED56 /* Tab.swift in Sources */,
 				3254C621287B03BD00FBF0F0 /* hw5widget.intentdefinition in Sources */,
@@ -282,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				326F127C287B386D0000D910 /* Constants.swift in Sources */,
 				3254C61B287B03BB00FBF0F0 /* hw5widget.swift in Sources */,
 				3254C620287B03BD00FBF0F0 /* hw5widget.intentdefinition in Sources */,
 				3254C62D287B085100FBF0F0 /* Suffix.swift in Sources */,
@@ -422,6 +432,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = hw5/hw5.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"hw5/Preview Content\"";
@@ -453,6 +464,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = hw5/hw5.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"hw5/Preview Content\"";
@@ -483,6 +495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = hw5widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F22RUMBF52;
@@ -510,6 +523,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = hw5widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F22RUMBF52;

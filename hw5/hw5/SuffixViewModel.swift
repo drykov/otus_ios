@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import WidgetKit
 
 enum Mode: String, CaseIterable {
     case abc = "ABC", count = "Count"
@@ -44,7 +45,20 @@ class SuffixViewModel: ObservableObject {
                 }
             }
         }
+        save()
         update()
+    }
+    
+    private func save() {
+        let array = suffixes.filter { suffix in
+            suffix.key.count > 3
+        }.map { suffix in
+            Suffix(suffix: suffix.key, count: suffix.value)
+        }
+        if let encoded = try? JSONEncoder().encode(array) {
+            UserDefaults(suiteName: userDefaultsGroup)?.set(encoded, forKey: suffixesKey)
+            WidgetCenter.shared.reloadAllTimelines()
+        }
     }
     
     private func update() {

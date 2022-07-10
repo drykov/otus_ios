@@ -26,8 +26,13 @@ struct Provider: IntentTimelineProvider {
         completion(timeline)
     }
     
-    func loadSuffixes() -> [Suffix] {
-        [Suffix(suffix: "abc", count: 1), Suffix(suffix: "def", count: 2)]
+    private func loadSuffixes() -> [Suffix] {
+        if let encoded = UserDefaults(suiteName: userDefaultsGroup)?.object(forKey: suffixesKey) as? Data {
+            if let suffixes = try? JSONDecoder().decode([Suffix].self, from: encoded) {
+                return suffixes
+            }
+        }
+        return []
     }
 }
 
@@ -53,7 +58,6 @@ struct hw5widgetEntryView : View {
             }
             Spacer()
             HStack {
-                
                 Link(destination: URL(string: Tab.input.rawValue)!, label:{ Text("Input")})
                 Link(destination: URL(string: Tab.stats.rawValue)!, label:{ Text("Stats")})
             }
