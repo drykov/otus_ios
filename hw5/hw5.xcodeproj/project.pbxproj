@@ -15,7 +15,42 @@
 		323DCDD22821A3280065C302 /* StatsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323DCDD12821A3280065C302 /* StatsScreen.swift */; };
 		323DCDD42821A4770065C302 /* SuffixViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323DCDD32821A4770065C302 /* SuffixViewModel.swift */; };
 		323DCDD62821BAE40065C302 /* SuffixSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323DCDD52821BAE40065C302 /* SuffixSequence.swift */; };
+		3254C616287B03BB00FBF0F0 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3254C615287B03BB00FBF0F0 /* WidgetKit.framework */; };
+		3254C618287B03BB00FBF0F0 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3254C617287B03BB00FBF0F0 /* SwiftUI.framework */; };
+		3254C61B287B03BB00FBF0F0 /* hw5widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3254C61A287B03BB00FBF0F0 /* hw5widget.swift */; };
+		3254C61E287B03BD00FBF0F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3254C61D287B03BD00FBF0F0 /* Assets.xcassets */; };
+		3254C620287B03BD00FBF0F0 /* hw5widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 3254C61C287B03BB00FBF0F0 /* hw5widget.intentdefinition */; };
+		3254C621287B03BD00FBF0F0 /* hw5widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 3254C61C287B03BB00FBF0F0 /* hw5widget.intentdefinition */; };
+		3254C624287B03BD00FBF0F0 /* hw5widgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3254C613287B03BB00FBF0F0 /* hw5widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3254C62C287B081600FBF0F0 /* Suffix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3254C62B287B081600FBF0F0 /* Suffix.swift */; };
+		3254C62D287B085100FBF0F0 /* Suffix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3254C62B287B081600FBF0F0 /* Suffix.swift */; };
+		3292BB99287B0FA40066ED56 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3292BB98287B0FA40066ED56 /* Tab.swift */; };
+		3292BB9A287B0FA40066ED56 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3292BB98287B0FA40066ED56 /* Tab.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3254C622287B03BD00FBF0F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 323DCDB62821A1610065C302 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3254C612287B03BB00FBF0F0;
+			remoteInfo = hw5widgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3254C628287B03BD00FBF0F0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3254C624287B03BD00FBF0F0 /* hw5widgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		323DCDBE2821A1610065C302 /* hw5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hw5.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,6 +62,15 @@
 		323DCDD12821A3280065C302 /* StatsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsScreen.swift; sourceTree = "<group>"; };
 		323DCDD32821A4770065C302 /* SuffixViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixViewModel.swift; sourceTree = "<group>"; };
 		323DCDD52821BAE40065C302 /* SuffixSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixSequence.swift; sourceTree = "<group>"; };
+		3254C613287B03BB00FBF0F0 /* hw5widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = hw5widgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3254C615287B03BB00FBF0F0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		3254C617287B03BB00FBF0F0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		3254C61A287B03BB00FBF0F0 /* hw5widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hw5widget.swift; sourceTree = "<group>"; };
+		3254C61C287B03BB00FBF0F0 /* hw5widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = hw5widget.intentdefinition; sourceTree = "<group>"; };
+		3254C61D287B03BD00FBF0F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3254C61F287B03BD00FBF0F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3254C62B287B081600FBF0F0 /* Suffix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suffix.swift; sourceTree = "<group>"; };
+		3292BB98287B0FA40066ED56 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,13 +81,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3254C610287B03BB00FBF0F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3254C618287B03BB00FBF0F0 /* SwiftUI.framework in Frameworks */,
+				3254C616287B03BB00FBF0F0 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		323DCDB52821A1610065C302 = {
 			isa = PBXGroup;
 			children = (
+				3254C62A287B07F800FBF0F0 /* shared */,
 				323DCDC02821A1610065C302 /* hw5 */,
+				3254C619287B03BB00FBF0F0 /* hw5widget */,
+				3254C614287B03BB00FBF0F0 /* Frameworks */,
 				323DCDBF2821A1610065C302 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				323DCDBE2821A1610065C302 /* hw5.app */,
+				3254C613287B03BB00FBF0F0 /* hw5widgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +136,35 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		3254C614287B03BB00FBF0F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3254C615287B03BB00FBF0F0 /* WidgetKit.framework */,
+				3254C617287B03BB00FBF0F0 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3254C619287B03BB00FBF0F0 /* hw5widget */ = {
+			isa = PBXGroup;
+			children = (
+				3254C61A287B03BB00FBF0F0 /* hw5widget.swift */,
+				3254C61C287B03BB00FBF0F0 /* hw5widget.intentdefinition */,
+				3254C61D287B03BD00FBF0F0 /* Assets.xcassets */,
+				3254C61F287B03BD00FBF0F0 /* Info.plist */,
+			);
+			path = hw5widget;
+			sourceTree = "<group>";
+		};
+		3254C62A287B07F800FBF0F0 /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				3254C62B287B081600FBF0F0 /* Suffix.swift */,
+				3292BB98287B0FA40066ED56 /* Tab.swift */,
+			);
+			path = shared;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,15 +175,34 @@
 				323DCDBA2821A1610065C302 /* Sources */,
 				323DCDBB2821A1610065C302 /* Frameworks */,
 				323DCDBC2821A1610065C302 /* Resources */,
+				3254C628287B03BD00FBF0F0 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3254C623287B03BD00FBF0F0 /* PBXTargetDependency */,
 			);
 			name = hw5;
 			productName = hw5;
 			productReference = 323DCDBE2821A1610065C302 /* hw5.app */;
 			productType = "com.apple.product-type.application";
+		};
+		3254C612287B03BB00FBF0F0 /* hw5widgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3254C625287B03BD00FBF0F0 /* Build configuration list for PBXNativeTarget "hw5widgetExtension" */;
+			buildPhases = (
+				3254C60F287B03BB00FBF0F0 /* Sources */,
+				3254C610287B03BB00FBF0F0 /* Frameworks */,
+				3254C611287B03BB00FBF0F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hw5widgetExtension;
+			productName = hw5widgetExtension;
+			productReference = 3254C613287B03BB00FBF0F0 /* hw5widgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -110,6 +215,9 @@
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					323DCDBD2821A1610065C302 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					3254C612287B03BB00FBF0F0 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
@@ -128,6 +236,7 @@
 			projectRoot = "";
 			targets = (
 				323DCDBD2821A1610065C302 /* hw5 */,
+				3254C612287B03BB00FBF0F0 /* hw5widgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -142,6 +251,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3254C611287B03BB00FBF0F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3254C61E287B03BD00FBF0F0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -153,12 +270,34 @@
 				323DCDD62821BAE40065C302 /* SuffixSequence.swift in Sources */,
 				323DCDC22821A1610065C302 /* hw5App.swift in Sources */,
 				323DCDD02821A2F70065C302 /* InputScreen.swift in Sources */,
+				3254C62C287B081600FBF0F0 /* Suffix.swift in Sources */,
 				323DCDD42821A4770065C302 /* SuffixViewModel.swift in Sources */,
+				3292BB99287B0FA40066ED56 /* Tab.swift in Sources */,
+				3254C621287B03BD00FBF0F0 /* hw5widget.intentdefinition in Sources */,
 				323DCDD22821A3280065C302 /* StatsScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3254C60F287B03BB00FBF0F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3254C61B287B03BB00FBF0F0 /* hw5widget.swift in Sources */,
+				3254C620287B03BD00FBF0F0 /* hw5widget.intentdefinition in Sources */,
+				3254C62D287B085100FBF0F0 /* Suffix.swift in Sources */,
+				3292BB9A287B0FA40066ED56 /* Tab.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3254C623287B03BD00FBF0F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3254C612287B03BB00FBF0F0 /* hw5widgetExtension */;
+			targetProxy = 3254C622287B03BD00FBF0F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		323DCDCA2821A1630065C302 /* Debug */ = {
@@ -280,6 +419,7 @@
 		323DCDCD2821A1630065C302 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -288,6 +428,7 @@
 				DEVELOPMENT_TEAM = F22RUMBF52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = hw5/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -309,6 +450,7 @@
 		323DCDCE2821A1630065C302 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -317,6 +459,7 @@
 				DEVELOPMENT_TEAM = F22RUMBF52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = hw5/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -329,6 +472,60 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.rykov.hw5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3254C626287B03BD00FBF0F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F22RUMBF52;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = hw5widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = hw5widget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.rykov.hw5.hw5widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3254C627287B03BD00FBF0F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F22RUMBF52;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = hw5widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = hw5widget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.rykov.hw5.hw5widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -352,6 +549,15 @@
 			buildConfigurations = (
 				323DCDCD2821A1630065C302 /* Debug */,
 				323DCDCE2821A1630065C302 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3254C625287B03BD00FBF0F0 /* Build configuration list for PBXNativeTarget "hw5widgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3254C626287B03BD00FBF0F0 /* Debug */,
+				3254C627287B03BD00FBF0F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -7,10 +7,6 @@
 
 import SwiftUI
 
-enum Tab {
-    case input, stats
-}
-
 struct ContentView: View {
     
     @State private var tab = Tab.input
@@ -27,6 +23,14 @@ struct ContentView: View {
                     Label("Stats", systemImage: "list.number")
                 }
                 .tag(Tab.stats)
+        }
+        .onOpenURL { url in
+            switch url.absoluteString {
+            case Tab.input.rawValue:
+                tab = .input
+            default:
+                tab = .stats
+            }
         }
     }
 }
